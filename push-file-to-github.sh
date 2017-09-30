@@ -53,7 +53,6 @@ fi
 
 echo "https://api.github.com/repos/$username/$repo/contents/$FILE?ref=$branch"
 sha=$(curl -X GET "https://api.github.com/repos/$username/$repo/contents/$FILE?ref=$branch" | jq .sha)
-echo $TOKEN
 curl -X PUT -H "Authorization: token $TOKEN" -d "{\
 \"message\": \"update\", \"content\": \"$(openssl base64 -A -in $FILE)\", \"branch\": \"$branch\",\
 \"sha\": $sha}" \
