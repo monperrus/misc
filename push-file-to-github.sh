@@ -1,6 +1,13 @@
 #!/bin/bash
 # script to push a file to github via the REST API
 #
+# usage:
+# push-file-to-github.sh <file> <user> <repo>
+# push-file-to-github.sh <file> <user> <repo> <branch>
+# push-file-to-github.sh <file> <user> <repo> <branch> <token>
+#
+# the Github token is taken from the environment variable $GITHUB_AUTH_TOKEN if not passed as parameter
+#
 # requirements:
 # "curl", "jq" available (aptitude install jq)
 # the file must already exists on the target github repo
