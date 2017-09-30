@@ -55,6 +55,7 @@ echo "https://api.github.com/repos/$username/$repo/contents/$FILE?ref=$branch"
 sha=$(curl -X GET "https://api.github.com/repos/$username/$repo/contents/$FILE?ref=$branch" | jq .sha)
 content=$(curl -X GET "https://api.github.com/repos/$username/$repo/contents/$FILE?ref=$branch" | jq .content)
 newcontent=\"$(openssl base64 -A -in $FILE)\\n\"
+echo $content $newcontent
 if [[ ! $content == $newcontent ]];
 then
 curl -X PUT -H "Authorization: token $TOKEN" -d "{\
