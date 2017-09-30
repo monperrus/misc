@@ -55,15 +55,9 @@ echo "https://api.github.com/repos/$username/$repo/contents/$FILE?ref=$branch"
 sha=$(curl -H "Authorization: token $TOKEN" -X GET "https://api.github.com/repos/$username/$repo/contents/$FILE?ref=$branch" | jq .sha)
 content=$(curl -H "Authorization: token $TOKEN" -X GET "https://api.github.com/repos/$username/$repo/contents/$FILE?ref=$branch" | jq -r .content)
 newcontent=$(openssl base64 -A -in $FILE)
-echo $content
-echo $newcontent
-if [[ ! $content == $newcontent ]];
-then
+
 echo uploading
 curl -X PUT -H "Authorization: token $TOKEN" -d "{\
 \"message\": \"update\", \"content\": \"$newcontent\", \"branch\": \"$branch\",\
 \"sha\": $sha}" \
 https://api.github.com/repos/$username/$repo/contents/$FILE
-else 
-  content is the same
-fi
