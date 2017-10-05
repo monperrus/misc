@@ -21,6 +21,16 @@
 
 FILE=$1
 
+if [[ -z $1 ]];
+then
+echo usage:
+echo push-file-to-github.sh \<file\> \<user\> \<repo\>
+echo push-file-to-github.sh \<file\> \<user\> \<repo\> \<branch\>
+echo push-file-to-github.sh \<file\> \<user\> \<repo\> \<branch\> \<token\>
+exit
+fi
+
+
 if [[ ! -z $2 ]];
 then
   username=$2
