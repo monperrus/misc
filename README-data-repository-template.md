@@ -4,8 +4,9 @@ One paragraph of what the data is
 
 One sentence about the license.
 
-Paper(s) to cite if one uses the data: Complete bibliographic reference.
+Paper(s) to cite if one uses the data: [How to make a good open-science repository? (Martin Monperrus)](https://www.monperrus.net/martin/how-to-open-science-software-research)
 
+`
 ## Getting Started
 
 What software packages you need to explore the data and how to install them
