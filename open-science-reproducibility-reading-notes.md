@@ -1,7 +1,7 @@
 A Living Review About Open science and Reproducibility
 ======================================================
 
-Authors: Martin Monperrus
+Authors: Martin Monperrus & Github contributors
 
 In this document, I list papers about open science with a focus on reproducibility. Pull-requests welcome to add links and new items :-)
 
