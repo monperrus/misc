@@ -23,7 +23,8 @@ function main() {
             var text = $(result).find('.gs_rt').text();
 
             // where to add the data: add the end of the menu which is under each entry
-            var where = $($(result).find('.gs_fl').get(1));
+            var whereList = $(result).find('.gs_fl')
+            var where = $(whereList.get(whereList.length - 1));
 
             // we create a DIV object to contain the bibtex data
             var container = $('<pre/>');
