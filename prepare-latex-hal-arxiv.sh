@@ -1,6 +1,7 @@
 #!/bin/bash
-# Creates a zip file containing all sources of a LaTeX document to be submitted to Arxiv / Hal.
-# All included files are unfolded statically in a single TeX file
+#
+# Creates a zip file containing all sources of a LaTeX document to be submitted to Arxiv.
+# All included files are unfolded statically in a single TeX file.
 # The comments of the source file are removed (except the ones with \begin{comment} and the like)
 #
 # requires latexmk (sudo apt-get install latexmk)
@@ -9,11 +10,11 @@
 # cd my-paper-dir
 # bash prepare-latex-hal-arxiv.sh main.tex
 # 
-# This is quick and dirty, but it works and I use it very often
+# Disclaimer: this is quick and dirty, but it works and I use it very often.
 #
 # Author: Martin Monperrus
-# Version of Nov 2016
 # License: Public domain
+# URL: https://github.com/monperrus/misc/blob/master/prepare-latex-hal-arxiv.sh
 
 TEMPDIR=`dirname $(mktemp)`
 
@@ -167,6 +168,10 @@ do
 done
 
 
+if grep biblatex $PP;
+then
+  cp /usr/share/texlive/texmf-dist/tex/latex/biblatex/blx-compat.def /usr/share/texlive/texmf-dist/tex/latex/biblatex/biblatex.sty $DIR
+fi
 
 echo now entering target directory
 cd $DIR
