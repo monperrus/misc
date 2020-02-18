@@ -10,3 +10,6 @@ Pull request welcome
 * kieker: <https://github.com/kieker-monitoring/kieker>
 * java-callgraph: for collecting dynamic call graphs <https://github.com/gousiosg/java-callgraph>
 * elastic apm: <https://github.com/elastic/apm-agent-java> automatically measures the performance of your application and tracks errors [doc](https://www.elastic.co/guide/en/apm/agent/java/current/index.html)
+* rust-jvmti: <https://github.com/xea/rust-jvmti>
+* stackparam: <https://github.com/cretz/stackparam> JVM agent to add method parameters to Java stack traces
+(in Rust)
