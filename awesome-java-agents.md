@@ -13,3 +13,4 @@ Pull request welcome
 * rust-jvmti: <https://github.com/xea/rust-jvmti>
 * stackparam: <https://github.com/cretz/stackparam> JVM agent to add method parameters to Java stack traces
 (in Rust)
+* remoraj: <https://github.com/Nastel/remoraj> bytecode instrumentation agent to intercept java IPC calls such as: HTTP, WebServices, JMS, JDBC, Sockets, WebSockets, Kafka, I/O Streams, etc.
