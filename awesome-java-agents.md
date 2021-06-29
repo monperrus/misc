@@ -15,3 +15,4 @@ Pull request welcome
 (in Rust)
 * remoraj: <https://github.com/Nastel/remoraj> bytecode instrumentation agent to intercept java IPC calls such as: HTTP, WebServices, JMS, JDBC, Sockets, WebSockets, Kafka, I/O Streams, etc.
 * code-pulse: <https://github.com/codedx/codepulse> does real-time coverage
+* contrast: <https://github.com/Contrast-Security-OSS/contrast-maven-plugin> is a Java agent to find vulnerabilities in maven projects.
