@@ -1,13 +1,16 @@
 // ==UserScript==
 // @name          direct-bibtex-in-google-scholar
 // @description   add a bibtex link in Google Scholar (direct-bibtex-in-google-scholar)
-// @url           http://www.monperrus.net/martin/direct-bibtex-in-google-scholar
-// @namespace     http://www.monperrus.net/martin/
+// @homepage      https://www.monperrus.net/martin/direct-bibtex-in-google-scholar
+// @namespace     https://www.monperrus.net/martin/
 // @author        Martin Monperrus <martin.monperrus@gnieh.org>
-// @author        Nicolas Harrand <Nicolas Harrand <harrand@kth.se>>
+// @author        Nicolas Harrand <harrand@kth.se>
 // @license       MIT
-// @version       0.2
-// @include       *://scholar.google.tld/*
+// @version       0.3
+// @match         https://scholar.google.com/*
+// @match         https://scholar.google.fr/*
+// @match         https://scholar.google.se/*
+// @match         https://scholar.google.de/*
 // @require       https://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js
 // @grant         GM_xmlhttpRequest
 // @grant         GM_setClipboard
@@ -21,6 +24,7 @@ function main() {
         function (index, result) {
             // getting the paper title
             var text = $(result).find('.gs_rt').text();
+
 
             // where to add the data: add the end of the menu which is under each entry
             var whereList = $(result).find('.gs_fl')
