@@ -1,4 +1,4 @@
-A Living Review About Open science and Reproducibility
+Notes About Open science and Reproducibility
 ======================================================
 
 Authors: Martin Monperrus & Github contributors
