@@ -15,7 +15,9 @@
 * Latex:
   * [prepare-latex-hal-arxiv.sh: Creates a zip file containing all sources of a LaTeX document to be submitted to Arxiv](https://github.com/monperrus/misc/blob/master/prepare-latex-hal-arxiv.sh)
   * [preprocess-latex.py: preprocess a latex file](https://github.com/monperrus/crypto/blob/main/preprocess-latex.py)
-
+* [ddc.md: notes on diverse double compilation](https://github.com/monperrus/crypto/blob/main/ddc.md)
+* [shamir.md: compatible implementations of Shamir's Secret Sharing](https://github.com/monperrus/crypto/blob/main/shamir.md)
+* [genai-science.md: notes on generative AI and science](https://github.com/monperrus/crypto/blob/main/genai-science.md)
 
 ## gists
 
