@@ -1,4 +1,4 @@
-# notes on Generative AI and science
+# Notes on Generative AI and scientific writing
 
 ## Paper writing
 
