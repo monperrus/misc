@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 # lists all gists of a given user
 
+import os
 import json
 import requests
 
@@ -54,13 +55,13 @@ def dl_write_gists(username):
         json.dump(user_gists, file, indent=2)
     return user_gists
 
-if __name__ == "__main__":
-    
+def list_monperrus_gists():    
     # Optionally, get gists for a specific user
     username = 'monperrus'  # Replace with the actual username
-
-    # dl_write_gists(username)
-    with open(f"{username}_gists.json", "r") as file:
-        user_gists = json.load(file)
+    user_gists = get_all_gists(username)
     analyze_gists(user_gists)   
     #print(f"Total gists for {username}: {len(user_gists)}")
+
+if __name__ == "__main__":
+    list_monperrus_gists()
+    # print(json.dumps(get_all_gists("monperrus")))
