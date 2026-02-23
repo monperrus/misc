@@ -18,3 +18,4 @@ Pull request welcome
 * contrast: <https://github.com/Contrast-Security-OSS/contrast-maven-plugin> is a Java agent to find vulnerabilities in maven projects.
 * jHiccup: <https://github.com/giltene/jHiccup> an agent that logs and records platform "hiccups" including the JVM stalls
 * arex: <https://github.com/arextest/arex-agent-java> lightweight Java agent for traffic capture and replay, enhancing testing and debugging. 
+* JVM Hotpath: https://github.com/sfkamath/jvm-hotpath - Java agent for line-level execution frequency analysis
