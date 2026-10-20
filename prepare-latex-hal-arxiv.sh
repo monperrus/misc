@@ -100,6 +100,10 @@ PDF=$DOC.pdf
 
 DIR=$TEMPDIR/${DOC}_d
 
+# biblatex files actually loaded by the local build (core and styles such as biblatex-apa),
+# recorded before cleaning: Arxiv must use the same versions as the local .bbl
+BIBLATEX_FILES=$(grep '^INPUT .*/tex/latex/biblatex' $DOC.fls 2>/dev/null | cut -d' ' -f2- | sort -u)
+
 # now cleaning the directory before zip (no use of "rubber --clean $DOC" # we now use latexmk)
 latexmk -C $DOC
 
@@ -168,9 +172,10 @@ do
 done
 
 
-if grep biblatex $PP;
+# all of them, not only biblatex.sty: a local core mixed with Arxiv's styles fails (e.g. undefined \mkautorange)
+if [ -n "$BIBLATEX_FILES" ];
 then
-  cp /usr/share/texlive/texmf-dist/tex/latex/biblatex/blx-compat.def /usr/share/texlive/texmf-dist/tex/latex/biblatex/biblatex.sty $DIR
+  echo "$BIBLATEX_FILES" | while read -r f; do cp "$f" $DIR; done
 fi
 
 echo now entering target directory
