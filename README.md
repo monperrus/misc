@@ -11,6 +11,7 @@
 * [README-template.md: template for github readme](https://github.com/monperrus/misc/blob/master/README-template.md)
 * [open-science-reproducibility-reading-notes.md: notes about Open science and Reproducibility](https://github.com/monperrus/misc/blob/master/open-science-reproducibility-reading-notes.md)
 * [biblio-software-repair.bib: bibtex source of "The Living Review on Automated Program Repair "](https://github.com/monperrus/misc/blob/master/biblio-software-repair.bib)
+* [zenodo-download.md: downloading data from Zenodo with coding agents, and why the 403 "unusual traffic" is only about the User-Agent](https://github.com/monperrus/misc/blob/master/zenodo-download.md)
 * [list_gists.py: lists gists for a given user](https://github.com/monperrus/misc/blob/master/list_gists.py)
 * Latex:
   * [prepare-latex-hal-arxiv.sh: Creates a zip file containing all sources of a LaTeX document to be submitted to Arxiv](https://github.com/monperrus/misc/blob/master/prepare-latex-hal-arxiv.sh)
